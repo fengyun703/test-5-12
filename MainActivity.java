@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         float ydpi = displayMetrics.ydpi;
 
         // Get data about the drawable displayed
+        //fjkdsajf
         Drawable drawable = getResources().getDrawable(R.drawable.android_logo);
         int imageWidthInPixels = drawable.getIntrinsicWidth();
         int imageHeightInPixels = drawable.getIntrinsicHeight();
@@ -164,5 +165,10 @@ public class MainActivity extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 }
